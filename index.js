@@ -19,7 +19,7 @@ const list = document.createElement("ul");
 form.addEventListener("submit", (event) => {
     event.preventDefault()
     const { todo } = event.target;
-    if (todo.value) {
+    if (/^\w/.test(todo.value.trim())) {
         todo.value.split('\n').forEach((item) => {
             const textareaValue = item;
             const listItem = document.createElement("li");
@@ -43,13 +43,12 @@ form.addEventListener("submit", (event) => {
             sthru.forEach((item) => {
                 item.addEventListener("click", () => {
                     if (!item.style.textDecoration) item.style.textDecoration = 'line-through';
-                    else if (item.style.textDecoration) item.style.textDecoration = 'none'
+                    else item.style.textDecoration = 'none';
                 });
             });
         }
         )
     } else {
-
         let errorp = document.querySelector('p')
         errorp.textContent = 'Error. Todo cannot be empty'
         form.reset()
