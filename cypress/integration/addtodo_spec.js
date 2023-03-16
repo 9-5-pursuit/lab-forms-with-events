@@ -1,4 +1,4 @@
-describe("Todo App", () => {
+describe.only("Todo App", () => {
   it("adds a new to-do to the list", () => {
     cy.get("input, textarea").clear().type("Wash dishes");
     cy.get("button[type=submit]").click();
