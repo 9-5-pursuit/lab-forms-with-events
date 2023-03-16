@@ -11,7 +11,7 @@ form.addEventListener("submit", (event) => {
   newTask.textContent = task
   
   //If no task is inputted then error message is displayed
-  if (task.trim() === "") {
+  if (task.length === 0) {
     error.textContent = "Error. Todo cannot be empty";
     return toDoList.append(error);;
   }
