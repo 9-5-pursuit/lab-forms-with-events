@@ -14,9 +14,8 @@ const form = document.createElement("form");
     submitBtn['type']= 'submit';
     submitBtn.textContent = "Submit";
     form.appendChild(submitBtn);
-    //form.appendChild(delbtn)
 
-    // Create the unordered list element
+
     const list = document.createElement("ul");
 
     submitBtn.addEventListener("click", (event) => {
@@ -32,7 +31,9 @@ const form = document.createElement("form");
 
       sthru.forEach((item) => {
       item.addEventListener("click", () => {
-        item.style.textDecoration = 'line-through'
+
+        if (!item.style.textDecoration) item.style.textDecoration = 'line-through';
+        else if (item.style.textDecoration) item.style.textDecoration = 'none'
       });
     });
     } else {
