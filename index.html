@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To-Do List</title>
+    <link href="style.css" rel="stylesheet" type="text/cs" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My To-Do List</title>
+    <script src="./index.js" defer></script>
+  </head>
 
-  <script src="./index.js" defer></script>
-</head>
+  <body>
+    <h1>Todos</h1>
 
-<body>
-  <h1>CODE YOUR SOLUTION</h1>
-</body>
+    <form class="user-form">
+      <hr />
+      <input type="text" id="new-ToDo" placeholder="Type a todo" />
 
+      <button type="submit">Submit</button>
+    </form>
+    <ul class="displayItem"></ul>
+  </body>
 </html>
