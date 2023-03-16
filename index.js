@@ -57,7 +57,7 @@ form.addEventListener("submit", (event) => {
 
 document.body.appendChild(form);
 document.body.appendChild(list);
-document.querySelector('body').append(document.createElement('p'))
+document.body.append(document.createElement('p'))
 
 
 
