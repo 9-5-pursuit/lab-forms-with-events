@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server --port=3000 .",
-    "test": "cypress run"
+    "test": "cypress run",
+    "test-1": "cypress run --spec ./cypress/integration/addtodo_spec.js"
   },
   "keywords": [],
   "author": "",
