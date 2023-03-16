@@ -8,10 +8,59 @@
   <title>My To-Do List</title>
 
   <script src="./index.js" defer></script>
+  <link href='https://fonts.googleapis.com/css?family=Croissant One' rel='stylesheet'>
+  <style type="text/css">
+
+    main {
+      margin:0 auto;
+      max-width: 600px;
+    }
+    form {
+      margin-bottom:10px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #eee;
+      font-family: 'Croissant One';
+    }
+    #new-todo, #lists {
+      background-color: #fff;
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+    fieldset {
+      border: 1px solid rgba(200, 200, 200, 0.5);
+      margin: 1rem 0;
+    }
+    #lists ul {
+    list-style: "\2705";
+    }
+    #lists li {
+      font-size: 40px;
+      font-weight: 700;
+      padding-left:10px;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>CODE YOUR SOLUTION</h1>
+  <h1>My To-Do List</h1>
+  <main>
+    <form id="new-todo">
+      <fieldset>
+        <legend>To-Do</legend>
+        What do you need to do:  <textarea id="todo" type="text" name="todo"></textarea>
+      </fieldset>
+      <button type="submit">Add To List</button>
+    </form>
+  
+    <section id="lists">
+      <h3>List of things to be done</h3>
+      <ul></ul>
+    </section>
+  </main>
 </body>
 
 </html>
