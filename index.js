@@ -4,55 +4,48 @@ let hone = document.querySelector('h1')
 
 hone.textContent = 'My To-Dos'
 
-let nf = document.createElement('form')
+const form = document.createElement("form");
 
-let ta = document.createElement('textarea')
+    // Create the textarea element
+    const textarea = document.createElement("textarea");
+    form.appendChild(textarea);
 
-ta.setAttribute('type', 'text')
-ta.setAttribute('name', 'todo')
+    const submitBtn = document.createElement("button");
+    submitBtn['type']= 'submit';
+    submitBtn.textContent = "Submit";
+    form.appendChild(submitBtn);
+    //form.appendChild(delbtn)
 
-let ubtn = document.createElement('input')
+    // Create the unordered list element
+    const list = document.createElement("ul");
 
-ubtn.setAttribute('type', 'submit')
-ubtn.setAttribute('value', 'submit')
+    submitBtn.addEventListener("click", (event) => {
+      event.preventDefault()
+      if (textarea.value){
+      const textareaValue = textarea.value;
+      const listItem = document.createElement("li");
+      const textNode = document.createTextNode(textareaValue);
+      listItem.appendChild(textNode);
+      list.appendChild(listItem);
+      form.reset();
+      const sthru = document.querySelectorAll("li");
 
-nf.appendChild(ta)
-nf.appendChild(ubtn)
+      sthru.forEach((item) => {
+      item.addEventListener("click", () => {
+        item.style.textDecoration = 'line-through'
+      });
+    });
+    } else {
 
-document.getElementsByTagName('body')[0].appendChild(nf)
-
-let ba = document.querySelector('body')
-
-ba.append(document.createElement('ul'))
-
-
-let inputList = document.querySelector('ul')
-
-nf.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const { todo } = event.target;
-
-    const userInputs = document.createElement("li");
-
-    if (todo.value){
-    userInputs.textContent = `${todo.value}`
-
-
-    inputList.append(userInputs)
-    nf.reset()
-}
-    
-    else {
-        const errorInputs = document.createElement("p");
-        errorInputs.textContent = 'Error. Todo Cannot be empty'
-
-        document.getElementsByTagName('body')[0].appendChild(errorInputs)
-
-        nf.reset()
-
+        let errorp = document.querySelector('p')
+        errorp.textContent = 'Error. Todo cannot be empty'
+        form.reset()
     }
-})
+    });
+
+    document.body.appendChild(form);
+    document.body.appendChild(list);
+    document.querySelector('body').append(document.createElement('p'))
 
 
 
