@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    background-color: lightblue;
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: fantasy;
+    color: lightcoral;
+}
+
+#first-p {
+    font-style: italic;
+}
+
+#button {
+    padding: 3px 15px;
+    border-radius: 10px;
+    border: 1px ridge black;
+    color: lightcoral;
+}
+
+ul li {
+    list-style-type: none;
+    color: lightcoral;
+    font-size: larger;
+    font-family: fantasy;
+}
