@@ -30,6 +30,9 @@ describe("Todo App", () => {
   it("strikes through an li when clicked", () => {
     cy.get("input, textarea").clear().type("Wash dishes");
     cy.get("button[type=submit]").click();
-    cy.get("li").first().click().should("have.css", "text-decoration", "line-through solid rgb(0, 0, 0)");
+    cy.get("li")
+      .first()
+      .click()
+      .should("have.css", "text-decoration", "line-through solid rgb(0, 0, 0)");
   });
 });
