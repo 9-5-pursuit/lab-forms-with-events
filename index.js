@@ -5,8 +5,6 @@ const textBox = document.querySelector("#textbox");
 const submitButton = document.querySelector("#submit-task");
 const pTag = document.createElement("p");
 
-submitButton.value = "Add Task to To-Do List";
-
 form.addEventListener("submit", (event) => {
 
     event.preventDefault();
