@@ -18,7 +18,7 @@ form.addEventListener("submit", (event) => {
     error.innerText = "Error! Todo cannot be empty";
     document.body.after(error);
   } else {
-    newTodo = document.createElement("li");
+    let newTodo = document.createElement("li");
     newTodo.textContent = input;
     newTodo.addEventListener("click", () => {
       if (newTodo.style.textDecoration === "line-through") {
