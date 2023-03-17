@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(2, 2, 62);
+  color: lavender;
+  padding: 5% 20% 5% 20%;
+  text-align: center;
+}
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 50px;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-align: center;
+}
+
+p {
+  color: red;
+}
+#submitB {
+  color: rgb(15, 2, 53);
+  background-color: lavender;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#textarea {
+  background-color: rgb(181, 167, 245);
+  color: rgb(2, 2, 62);
+}
+
+ul {
+  background-color: lavender;
+  border: 5px dashed rgb(155, 82, 186);
+  display: grid;
+  /* grid-template-columns: repeat(autofill, minmax 200px, 1fr); */
+  gap: 5px 20px;
+  padding: 5%;
+  text-align: center;
+}
+
+li {
+  color: rgb(15, 2, 53);
+  display: grid;
+  font-size: 25px;
+  font-family: cursive;
+  grid-template-rows: repeat(autofill, minmax 200px, 1fr);
+  gap: 10px 25px;
+  list-style-type: circle;
+  text-align: center;
+}
