@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To-Do List</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My To-Do List</title>
+    <script src="./index.js" defer></script>
+  </head>
 
-  <script src="./index.js" defer></script>
-</head>
-
-<body>
-  <h1>CODE YOUR SOLUTION</h1>
-</body>
-
+  <body>
+    <h1>My To-Dos</h1>
+    <form id="new-to-do">
+      <fieldset>
+        <legend>To-Do-List</legend>
+        <label for="new-task">Enter new task</label>
+        <input
+          id="new-task"
+          name="new-task"
+          type="text"
+          placeholder="Write here"
+        />
+      </fieldset>
+      <button type="submit">Add Task</button>
+    </form>
+    <ul></ul>
+  </body>
 </html>
