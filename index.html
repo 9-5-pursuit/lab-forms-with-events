@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="padding: 50px">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,13 +9,21 @@
     <script src="./index.js" defer></script>
   </head>
 
-  <body>
-    <h1>My To-Dos</h1>
-    <form id="Todo-form">
-      <label for="input">Input</label>
-      <input id="input" name="input" type="text" />
-      <button type="submit">Submit</button>
-    </form>
-    <ul></ul>
+  <body id="body" style="background: rgb(243, 224, 210)">
+    <header>
+      <h1>My To-Dos</h1>
+    </header>
+
+    <section id="input-section" style="background: hsl(184, 24%, 67%)">
+      <div id="form">
+        <form class="active" style="padding: 15px">
+          <input id="todo-box" name="todo" type="text" />
+          <button id="submit-task" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- div#-error-message-container" -->
+    <ul class="todo-list"></ul>
   </body>
 </html>
