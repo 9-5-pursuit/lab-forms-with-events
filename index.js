@@ -13,9 +13,9 @@ textInput.setAttribute("type", "text")
 textInput.setAttribute("id", "todo")
 form.append(textInput)
 
-let submitButton = document.createElement("input")
+let submitButton = document.createElement("button")
 submitButton.setAttribute("type", "submit")
-submitButton.setAttribute("value", "Add")
+submitButton.textContent = "add"
 submitButton.style.margin = "10px"
 submitButton.style.background = "silver"
 textInput.after(submitButton)
@@ -55,7 +55,6 @@ form.addEventListener("submit", (event) => {
         let listButtons = document.querySelectorAll("ul li button")
         for (let button of listButtons) {
             button.addEventListener("click", (event) => {
-                event.preventDefault()
                 event.target.parentNode.remove()
           })
         }
