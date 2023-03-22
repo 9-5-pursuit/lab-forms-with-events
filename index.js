@@ -17,6 +17,7 @@ let submitButton = document.createElement("input")
 submitButton.setAttribute("type", "submit")
 submitButton.setAttribute("value", "Add")
 submitButton.style.margin = "10px"
+submitButton.style.background = "silver"
 textInput.after(submitButton)
 
 let todoList = document.createElement("ul")
@@ -30,15 +31,16 @@ errorMessage.style.display = "none"
 form.addEventListener("submit", (event) => {
     event.preventDefault()
 
-    if (textInput.value === "") {
+    if (!textInput.value) {
         errorMessage.style.display = "inline"
+        console.log("Error!")
     } else {
         let lis = document.createElement("li")
         lis.style.margin = "10px"
 
-        let deleteButton = document.createElement("input")
-        deleteButton.setAttribute("type", "button")
-        deleteButton.setAttribute("value", "delete")
+        let deleteButton = document.createElement("button")
+        deleteButton.setAttribute("type", "submit")
+        deleteButton.textContent = "delete"
         deleteButton.style.margin = "10px"
 
         lis.textContent = `${textInput.value}`
@@ -50,30 +52,22 @@ form.addEventListener("submit", (event) => {
         
         textInput.value = ""
         errorMessage.style.display = "none"
-        let listButtons = document.querySelectorAll("ul li input")
+        let listButtons = document.querySelectorAll("ul li button")
         for (let button of listButtons) {
             button.addEventListener("click", (event) => {
-                event.target.parentNode.style.display = "none"
+                event.preventDefault()
+                event.target.parentNode.remove()
           })
-        }  
-    }
-
-    let listElements = document.querySelectorAll("ul li")
-    for (let element of listElements) {
-        element.addEventListener("click", () => {
-            element.style.textDecoration = "line-through"
-        /*
-            this code below (in my mind) should work but for some reason it does not. 
-            it works for each OTHER element and also some other weird quirkiness.
-            i had my friend do the same exact code and it was doing different
-            things. I have absolutely no idea why.
-        */
-
-        //  if (element.style.textDecoration !== "line-through") {
-        //      element.style.textDecoration = "line-through"
-        //  } else {
-        //      element.style.textDecoration = "none"
-        //  }
+        }
+        
+        lis.addEventListener("click", (event) => {
+         if (event.target.style.textDecoration !== "line-through") {
+             event.target.style.textDecoration = "line-through"
+         } else {
+             event.target.style.textDecoration = "none"
+         }
       })
     }
+    
+    form.reset()
 })
