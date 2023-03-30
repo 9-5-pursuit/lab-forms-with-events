@@ -1,0 +1,52 @@
+body{
+    background-color: yellowgreen;
+
+}
+
+h1{
+     text-align: center;
+     font-size: 100px;
+     color: #10454f;
+    }
+div{
+    text-align: center;
+}
+
+input[type=text]{
+    background-color: darkgreen;
+    padding: 1rem 4rem;
+    
+}
+button{
+    padding: 1rem;
+    background-color:#dbf227;
+    color: #10454f;
+
+}
+
+.error-div {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #dbf227;
+    box-shadow: 1px 3px 3px black;
+    padding: 10px 10px;
+    color: #10454f;
+  }
+  
+  .error-div {
+    transition: ease 1s;
+  }
+  .appear {
+    transition-timing-function: ease;
+    opacity: 1;
+  }
+  
+  .removed {
+    opacity: 0;
+    transition-timing-function: ease;
+  }
+  .strike-through{
+    text-decoration: line-through;
+  }
