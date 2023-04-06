@@ -14,13 +14,19 @@ form.addEventListener("submit", (event) => {
     form.append(error);
   } else {
     const listItem = document.createElement("li"); //creates list item html
+    listItem.setAttribute("id", "item");
+    const listItemDelete = document.createElement("button"); // created delete button
+    listItemDelete.style.color = "red";
+    listItemDelete.innerHTML = "Delete"; //writes delete on the button
     listItem.innerHTML = `${todo.value}`;
     emptyList.append(listItem); // attaches li to ul
-    // const deleteItem = document.createElement("button"); // makes button
-    // deleteItem.textContent = "Remove"; //write delete on button
-    // listItem.append(deleteItem);
+    listItem.append(listItemDelete); // attches delete button
 
     form.reset(); // clears form elements
+
+    listItemDelete.addEventListener("click", function () {
+      listItem.remove();
+    });
   }
 
   const done = document.querySelectorAll("li");
