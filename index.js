@@ -14,7 +14,7 @@ form.addEventListener("submit", (event) => {
     form.append(error);
   } else {
     const listItem = document.createElement("li"); //creates list item html
-    listItem.setAttribute("id", "item");
+
     const listItemDelete = document.createElement("button"); // created delete button
     listItemDelete.style.color = "red";
     listItemDelete.innerHTML = "Delete"; //writes delete on the button
@@ -31,9 +31,10 @@ form.addEventListener("submit", (event) => {
 
   const done = document.querySelectorAll("li");
 
-  done.forEach(function (i) {
-    i.addEventListener("click", () => {
-      i.style.textDecoration = "line-through";
+  done.forEach((e) => {
+    e.addEventListener("click", () => {
+      e.style.textDecoration =
+        e.style.textDecoration === "line-through" ? "" : "line-through";
     });
   });
 });
