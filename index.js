@@ -13,13 +13,23 @@ form.addEventListener("submit", (e) => {
     document.querySelector("p").remove();
   }
   const liList = document.createElement("li");
-  liList.textContent = e.target["todo"].value;
-  if (e.target["todo"].value) {
-    uList.append(liList);
-  } else {
+
+  if (!e.target["todo"].value) {
     pTag = document.createElement("p");
     pTag.innerText = "Error: To-Do can't be empty";
     body.append(pTag);
+  } else {
+    liList.textContent = e.target["todo"].value;
+    uList.append(liList);
+    uList.querySelector("h3").style.textDecoration = "underline";
   }
+  console.log(uList);
+
+  // liList.forEach((element) => {
+  //   console.log(element);
+  liList.addEventListener("click", (e) => {
+    liList.style.textDecoration = "line-through";
+  });
+  // });
   e.target.reset();
 });
