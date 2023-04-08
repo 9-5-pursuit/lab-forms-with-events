@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>My To-Dos</h1>
+    </header>
+     <section id="input-section">
+      <div id="form">
+        <form action=""><br>
+          <input type="text" id="todo-input" required>
+          <button>Submit</button>
+        </form>
+      </div>
+     </section>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My To-Do List</title>
+     <div id="error-message-container">
+      <p id="perror"></p>
+     </div>
 
-  <script src="./index.js" defer></script>
-</head>
+     <section id="list-section">
+      <div id="list-container">
+        <ul id="ul-list">
+        </ul>
+      </div>
+     </section>
 
-<body>
-  <h1>CODE YOUR SOLUTION</h1>
-</body>
-
+  </body>
 </html>

@@ -11,7 +11,7 @@ describe("Todo App", () => {
   });
 
   it("adds a second to-do to the list", () => {
-    cy.get("input, textarea").clear().type("Wash dishes");
+    cy.get("input, textarea").clear().type("git ");
     cy.get("button[type=submit]").click();
     cy.get("input, textarea").clear().type("Be awesome");
     cy.get("button[type=submit]").click();
